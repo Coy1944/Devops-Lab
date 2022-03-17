@@ -52,15 +52,15 @@ app.post('/api/students', (req, res) => {
 
    try {
        if (index === -1 && name !== '') {
-           rollbar.log("Student added successfully", {author: "Sam", type: "manual entry"});
+           rollbar.log("Email added successfully", {author: "Sam", type: "manual entry"});
            students.push(name)
            res.status(200).send(students)
        } else if (name === ''){
-           rollbar.error("No name provided");
-           res.status(400).send('You must enter a name.')
+           rollbar.error("No email provided");
+           res.status(400).send('You must enter an email.')
        } else {
-           rollbar.error("Student already exist");
-           res.status(400).send('That student already exists.')
+           rollbar.error("Email already exist");
+           res.status(400).send('That Email already exists.')
        }
    } catch (err) {
        console.log(err)
