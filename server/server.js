@@ -30,8 +30,8 @@ app.use(express.static(path.join(__dirname, "../public")));
 
 // app.get("/styles", function(req, res) {
 //     res.sendFile(path.join(__dirname, "../public/index.css"));
-// });
-const students = ['Jimmy', 'Timothy', 'Jimothy']
+// })
+const students = ['@gmail', '@yahoo', '@hotmail']
 
 app.get('/', (req, res) => {
     rollbar.info("HTML serverd sucessfully");

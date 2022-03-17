@@ -46,8 +46,8 @@
             container.innerHTML = ''
             nameInput.value = ''
 
-            res.data.forEach((studentName, index) => {
-                container.innerHTML += `<p name=${index}>${studentName}</p>`
+            res.data.forEach((email, index) => {
+                container.innerHTML += `<p name=${index}>${email}</p>`
             })
 
             document.querySelectorAll('p').forEach(element => {
